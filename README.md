@@ -18,7 +18,7 @@ Execute the following maven command to start the Spring-Boot server:
 
  * mvn spring-boot:run
  
- Once started, open your browser to http://localhost:8080, and you'll see a simple unsecure welcome page.  Then, using your favorite RESTClient tool, we can send a login request to http://localhost:8080/login. The request body will need to contain the username and password we want to authenticate.  For this example app, use the following JSON string as your body:
+ Once started, open your browser to http://localhost:8080, and you'll see a simple unsecure welcome page.  Then, using your favorite RESTClient tool, we can send a POST login request to http://localhost:8080/login. The request body will need to contain the username and password we want to authenticate.  For this example app, use the following JSON string as your body:
  
 {"username":"kimk","password":"pass4kim"}
 
