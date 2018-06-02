@@ -6,7 +6,7 @@ A simple spring-boot application that uses JTW for securing RESTful api calls af
 Files of Interest
 ------------------------------
  * ExampleApplication.java is the project's base.
- * The UserController.java contains two RESTful api endpoints that we will be securing behind our JWT wall
+ ** The UserController.java contains two RESTful api endpoints that we will be securing behind our JWT wall
  * User.java represents our service's registered users...users approved to access the REST api.
  * The com.example.security package contains all the spring authentication filters to secure our system
  * AccountCredentials.java is a simple class we'll use to transform our login request body into a workable object.
