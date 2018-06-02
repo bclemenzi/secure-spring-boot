@@ -18,7 +18,7 @@ public class UserController
     public @ResponseBody String getUsers()
     {
         // TODO Get our users from the database
-        String jsonReesponse = "{\"users\":[{\"id\":\"100\",\"firstname\":\"Kim\", \"lastname\":\"Kantola\"},{\"id\":\"200\",\"firstname\":\"Brendan\",\"lastname\":\"Clemenzi\"}]}";
+        String jsonReesponse = "{\"users\":[{\"id\":\"100\",\"firstname\":\"Kim\", \"lastname\":\"Kelly\"},{\"id\":\"200\",\"firstname\":\"Brendan\",\"lastname\":\"Clemenzi\"}]}";
         
         return jsonReesponse;
     }
@@ -27,7 +27,7 @@ public class UserController
     public @ResponseBody String getUsers(@PathVariable String userId)
     {
         // TODO Get our users from the database
-        String jsonReesponse = "{\"id\":\"" + userId + "\",\"firstname\":\"Kim\",\"lastname\":\"Kantola\"}";
+        String jsonReesponse = "{\"id\":\"" + userId + "\",\"firstname\":\"Kim\",\"lastname\":\"Kelly\"}";
         
         return jsonReesponse;
     }
