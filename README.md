@@ -12,10 +12,15 @@ Files of Interest
  * AccountCredentials.java is a simple class we'll use to transform our login request body into a workable object.
  * SecureUUID is a utility class that contains code to help with the password hashing and salting.
  
-Getting started
+Getting Started
 ------------------------------
 Execute the following maven command to start the Spring-Boot server:
 
  * mvn spring-boot:run
  
  Once started, open your browser to http://localhost:8080
+ 
+Application Flow
+------------------------------
+ * End user executes a POST transaction against http://localhost:8080/login with the following JSON string in the request body:
+  * {"username":"kimk","password":"pass4kim"}
