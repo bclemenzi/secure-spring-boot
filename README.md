@@ -1,7 +1,7 @@
 secure-spring-boot
 ==============
 
-A simple spring-boot application that used JWT to secure RESTful api endpoints.
+A simple spring-boot application that uses JWT to secure RESTful api endpoints.  User authentication is performed with a secure passwordHash and salt scheme.
  
 Files of Interest
 ------------------------------
