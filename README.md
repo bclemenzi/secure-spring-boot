@@ -22,4 +22,10 @@ Execute the following maven command to start the Spring-Boot server:
  
 Application Flow
 ------------------------------
- * End user executes a POST transaction against http://localhost:8080/login with the following JSON string in the request body: {"username":"kimk","password":"pass4kim"}  The response from the /login endpoint will be blank; however, if the authentication is successful, the response header will include an "Authorization" key.  This key will be used to access our secured RESTful endpoints going forward.
+ * User Login
+ 
+End user executes a POST transaction against http://localhost:8080/login with the following JSON string in the request body:
+
+{"username":"kimk","password":"pass4kim"}  
+
+The response from the /login endpoint will be blank; however, if the authentication is successful, the response header will include an "Authorization" key.  This key will be used to access our secured RESTful endpoints going forward.
