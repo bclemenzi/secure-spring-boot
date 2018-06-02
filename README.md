@@ -20,12 +20,22 @@ Execute the following maven command to start the Spring-Boot server:
  
  Once started, open your browser to http://localhost:8080
  
-Application Flow
-------------------------------
- * User Login
+User Login Flow
+---------------
  
 End user executes a POST transaction against http://localhost:8080/login with the following JSON string in the request body:
 
 {"username":"kimk","password":"pass4kim"}  
 
 The response from the /login endpoint will be blank; however, if the authentication is successful, the response header will include an "Authorization" key.  This key will be used to access our secured RESTful endpoints going forward.
+
+Secure Service Call
+---------------
+Using the "Authorization" key from our login header, we can now execute a GET request to query one of our secured RESTful edpoints.  
+ * Add Authorization key and value to our request header.
+ * Do a GET request against http://localhost:8080/users
+ 
+If all goes well, you'll have the following JSON string returned to you:
+
+{"users":[{"id":"100","firstname":"Kim", "lastname":"Kelly"},{"id":"200","firstname":"Brendan","lastname":"Clemenzi"}]}
+
