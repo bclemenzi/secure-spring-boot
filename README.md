@@ -39,7 +39,7 @@ Now, what are the important parts of this example?
  * Declared the we are not using an encryption-based password encorder.
  * Set and inMemoryAuthentication username and hashed password (this mocks our database stored user account)
 2. The JWTLoginFilter is where we do the heavy lifting for authenticating our user with the password hash and password salt.  
-* I have commented this class fairly to explain things.
+* I have commented this class fairly well to help explain things.
 * The getUserFromDatabaseByUser name will clearly need to be swapped out, but it's important to see the password hash and salt used to make the "kimk" user work.
 3. The TokenAuthenticationService class is used to define what our JWT key will be.  it's important to customize the SECRET and TOKEN_PREFIX to help ensure the security of your keys.  I have just put a few silly values in there for now
 
