@@ -38,6 +38,7 @@ Now, what are the important parts of this example?
 1. In the WebSecurityConfig.java class we have:
  * Declared the we are not using an encryption-based password encorder.
  * Set and inMemoryAuthentication username and hashed password (this mocks our database stored user account)
+ * This class also includes an example for authentication via a UserDetails object.  This is likely what you'll use in a production environment.
 2. The JWTLoginFilter is where we do the heavy lifting for authenticating our user with the password hash and password salt.  
 * I have commented this class fairly well to help explain things.
 * The getUserFromDatabaseByUser name will clearly need to be swapped out, but it's important to see the password hash and salt used to make the "kimk" user work.

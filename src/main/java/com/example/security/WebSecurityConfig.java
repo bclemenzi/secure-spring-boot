@@ -7,6 +7,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
@@ -23,6 +24,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
     protected void configure(HttpSecurity http) throws Exception
     {
         System.out.println("WebSecurityConfig.configure HttpSecurity");
+        
+        //.csrf().disable()
         
         http
             .csrf().disable()
@@ -44,9 +47,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
     {
         System.out.println("WebSecurityConfig.configure AuthenticationManagerBuilder");
         
+        // SAMPLE OF AN IN MEMORY AUTHENTICATION METHOD
         // Create a default account for us to validate against.  We are using our saved 
-        auth.inMemoryAuthentication().withUser("kimk").password("f64a04c1f4780013d23044c141795533").roles("ADMIN");
+        //auth.inMemoryAuthentication().withUser("kimk").password("f64a04c1f4780013d23044c141795533").roles("ADMIN");
+        
+        // SAMPLE OF A DATABASE USER_DETAILS AUTHENTICATION METHOD
+        // Get our user details
+        auth.userDetailsService(userDetailsService());
     }
+    
+    @Bean
+    public UserDetailsService userDetailsService() 
+    {
+      return new ExampleUserDetailsService();
+    };
     
     @Bean
     public static NoOpPasswordEncoder passwordEncoder() 

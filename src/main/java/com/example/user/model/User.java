@@ -1,16 +1,28 @@
-package com.example.model;
+package com.example.user.model;
 
 /**
- * User registration objects stored in the system.
+ * Our stored user record
  * 
  * @author brendanclemenzi
  */
 public class User
 {
+    private String id;
     private String username;
     private String password;
     private String passwordSalt;
+    
+    private String[] roles;
 
+    public String getId()
+    {
+        return id;
+    }
+    public void setId(String id)
+    {
+        this.id = id;
+    }
+    
     public String getUsername()
     {
         return username;
@@ -19,7 +31,7 @@ public class User
     {
         this.username = username;
     }
-    
+
     public String getPassword()
     {
         return password;
@@ -28,7 +40,7 @@ public class User
     {
         this.password = password;
     }
-    
+
     public String getPasswordSalt()
     {
         return passwordSalt;
@@ -36,5 +48,14 @@ public class User
     public void setPasswordSalt(String passwordSalt)
     {
         this.passwordSalt = passwordSalt;
+    }
+    
+    public String[] getRoles()
+    {
+        return roles;
+    }
+    public void setRoles(String[] roles)
+    {
+        this.roles = roles;
     }
 }

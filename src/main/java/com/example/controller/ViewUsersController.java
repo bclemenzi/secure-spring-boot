@@ -1,6 +1,5 @@
 package com.example.controller;
 
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,22 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
  * @author brendanclemenzi
  */
 @RestController
-public class UserController
+public class ViewUsersController
 {
     @RequestMapping("/users")
     public @ResponseBody String getUsers()
     {
         // TODO Get our users from the database
         String jsonReesponse = "{\"users\":[{\"id\":\"100\",\"firstname\":\"Kim\", \"lastname\":\"Kelly\"},{\"id\":\"200\",\"firstname\":\"Brendan\",\"lastname\":\"Clemenzi\"}]}";
-        
-        return jsonReesponse;
-    }
-    
-    @RequestMapping("/user/{userId}")
-    public @ResponseBody String getUsers(@PathVariable String userId)
-    {
-        // TODO Get our users from the database
-        String jsonReesponse = "{\"id\":\"" + userId + "\",\"firstname\":\"Kim\",\"lastname\":\"Kelly\"}";
         
         return jsonReesponse;
     }
